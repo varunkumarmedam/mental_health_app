@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_app/theme/my_colors.dart';
 // import 'package:flutter_images_slider/flutter_images_slider.dart';
 
 final List<String> imgList = [
@@ -60,20 +61,44 @@ class _ExerciseState extends State<Exercise> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text('Exercises'),
-        automaticallyImplyLeading: false,
-      ),
       body: ListView(
         children: <Widget>[
           Column(
             children: <Widget>[
+              Padding(padding: EdgeInsets.symmetric(vertical: 10)),
               Text(
-                'Exercise For Beginners',
+                'Exercises',
                 style: TextStyle(
-                  fontSize: 20,
-                ),
+                    fontSize: 30,
+                    color: MyColor.kPrimaryColor,
+                    fontWeight: FontWeight.w600),
+              ),
+              Padding(padding: EdgeInsets.symmetric(vertical: 5)),
+              Text(
+                'Physical health helps you in pace with Mental health',
+                style: TextStyle(
+                    fontSize: 16,
+                    color: MyColor.kPrimaryColor,
+                    fontWeight: FontWeight.w600),
+              ),
+              Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Exercise For ',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text(
+                    'Beginners',
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: MyColor.kPrimaryColor,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ],
               ),
               Stack(
                 children: [
@@ -96,11 +121,23 @@ class _ExerciseState extends State<Exercise> {
                   ),
                 ],
               ),
-              Text(
-                'Exercise For Intermediate',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Exercise For ',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text(
+                    'Intermediate',
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: MyColor.kPrimaryColor,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ],
               ),
               Stack(
                 children: [
@@ -123,11 +160,23 @@ class _ExerciseState extends State<Exercise> {
                   ),
                 ],
               ),
-              Text(
-                'Exercise For Advance',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Exercise For ',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text(
+                    'Advance',
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: MyColor.kPrimaryColor,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ],
               ),
               Stack(
                 children: [
@@ -150,11 +199,23 @@ class _ExerciseState extends State<Exercise> {
                   ),
                 ],
               ),
-              Text(
-                'Exercise For Expert',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Exercise For ',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text(
+                    'Expert',
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: MyColor.kPrimaryColor,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ],
               ),
               Stack(
                 children: [

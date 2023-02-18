@@ -1,6 +1,7 @@
 // import 'package:fitness_app_megahack/Diet/Diet1.dart';
 // ignore_for_file: deprecated_member_use
 
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app/home/diet/diet.dart';
 
@@ -36,13 +37,13 @@ class Second extends StatelessWidget {
                     Container(
                       height: 150,
                       width: 150,
-                      child: FlatButton(
-                        shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.purple)),
-                        color: Colors.white,
-                        textColor: Colors.purple,
-                        padding: EdgeInsets.all(8.0),
+                      child: FilledButton(
+                        // shape: new RoundedRectangleBorder(
+                        //     borderRadius: new BorderRadius.circular(18.0),
+                        //     side: BorderSide(color: Colors.purple)),
+                        // color: Colors.white,
+                        // textColor: Colors.purple,
+                        // padding: EdgeInsets.all(8.0),
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -60,26 +61,26 @@ class Second extends StatelessWidget {
                     Container(
                       height: 150,
                       width: 150,
-                      child: FlatButton(
-                        shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.purple)),
-                        color: Colors.white,
-                        textColor: Colors.purple,
-                        padding: EdgeInsets.all(8.0),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Diet()),
-                          );
-                        },
-                        child: Text(
-                          "Weight Gain".toUpperCase(),
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
-                        ),
-                      ),
+                      // child: FlatButton(
+                      //   shape: new RoundedRectangleBorder(
+                      //       borderRadius: new BorderRadius.circular(18.0),
+                      //       side: BorderSide(color: Colors.purple)),
+                      //   color: Colors.white,
+                      //   textColor: Colors.purple,
+                      //   padding: EdgeInsets.all(8.0),
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(builder: (context) => Diet()),
+                      //     );
+                        // },
+                      //   child: Text(
+                      //     "Weight Gain".toUpperCase(),
+                      //     style: TextStyle(
+                      //       fontSize: 16.0,
+                      //     ),
+                      //   ),
+                      // ),
                     ),
                   ],
                 ),
@@ -92,50 +93,50 @@ class Second extends StatelessWidget {
                     Container(
                       height: 150,
                       width: 150,
-                      child: FlatButton(
-                        shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.purple)),
-                        color: Colors.white,
-                        textColor: Colors.purple,
-                        padding: EdgeInsets.all(8.0),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Diet()),
-                          );
-                        },
-                        child: Text(
-                          "Weight Lose".toUpperCase(),
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
-                        ),
-                      ),
+                      // child: FlatButton(
+                      //   shape: new RoundedRectangleBorder(
+                      //       borderRadius: new BorderRadius.circular(18.0),
+                      //       side: BorderSide(color: Colors.purple)),
+                      //   color: Colors.white,
+                      //   textColor: Colors.purple,
+                      //   padding: EdgeInsets.all(8.0),
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(builder: (context) => Diet()),
+                      //     );
+                      //   },
+                      //   child: Text(
+                      //     "Weight Lose".toUpperCase(),
+                      //     style: TextStyle(
+                      //       fontSize: 16.0,
+                      //     ),
+                      //   ),
+                      // ),
                     ),
                     Container(
                       height: 150,
                       width: 150,
-                      child: FlatButton(
-                        shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.purple)),
-                        color: Colors.white,
-                        textColor: Colors.purple,
-                        padding: EdgeInsets.all(8.0),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Diet()),
-                          );
-                        },
-                        child: Text(
-                          "Other Diets".toUpperCase(),
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
-                        ),
-                      ),
+                      // child: FlatButton(
+                      //   shape: new RoundedRectangleBorder(
+                      //       borderRadius: new BorderRadius.circular(18.0),
+                      //       side: BorderSide(color: Colors.purple)),
+                      //   color: Colors.white,
+                      //   textColor: Colors.purple,
+                      //   padding: EdgeInsets.all(8.0),
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(builder: (context) => Diet()),
+                      //     );
+                      //   },
+                      //   child: Text(
+                      //     "Other Diets".toUpperCase(),
+                      //     style: TextStyle(
+                      //       fontSize: 16.0,
+                      //     ),
+                      //   ),
+                      // ),
                     ),
                   ],
                 ),

@@ -2,11 +2,13 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/home/diet/diet.dart';
 import 'package:flutter_app/home/screens/fifth.dart';
 import 'package:flutter_app/home/screens/fourth.dart';
 import 'package:flutter_app/home/screens/pedometer_1.dart';
 import 'package:flutter_app/home/screens/second.dart';
 import 'package:flutter_app/home/screens/third.dart';
+import 'package:flutter_app/home/start_quiz.dart';
 import 'package:flutter_app/theme/my_colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -26,29 +28,28 @@ class _DashBoardState extends State<DashBoard> {
   double bmi = 0.0;
 
   final Exercise _sites = new Exercise();
-  final Stepcount _dashboard = new Stepcount();
-  final Second _clients = new Second();
+  // final Stepcount _dashboard = new Stepcount();
+  final StartQuiz _quiz = new StartQuiz();
+  // final Second _clients = new Second();
+  final Diet _diet = new Diet();
   final Fourth _flutterpages = new Fourth();
-  final Fifth _pageother = new Fifth();
+  // final Fifth _pageother = new Fifth();
 
-  Widget _showPage = new Stepcount();
+  Widget _showPage = new StartQuiz();
 
   Widget _pageChooser(int page) {
     switch (page) {
       case 0:
-        return _dashboard;
+        return _quiz;
         break;
       case 1:
-        return _clients;
+        return _diet;
         break;
       case 2:
         return _sites;
         break;
       case 3:
         return _flutterpages;
-        break;
-      case 4:
-        return _pageother;
         break;
       default:
         return Center(
@@ -80,13 +81,24 @@ class _DashBoardState extends State<DashBoard> {
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
         index: pageIndex,
-        height: 50.0,
+        height: 55.0,
         items: <Widget>[
-          Icon(FontAwesomeIcons.shoePrints, size: 23, color: Colors.white),
-          Icon(FontAwesomeIcons.utensils, size: 30, color: Colors.white),
-          Icon(FontAwesomeIcons.dumbbell, size: 30, color: Colors.white),
-          Icon(FontAwesomeIcons.fileMedicalAlt, size: 30, color: Colors.white),
-          Icon(FontAwesomeIcons.commentMedical, size: 30, color: Colors.white),
+          Container(
+              padding: EdgeInsets.all(10),
+              child: Icon(FontAwesomeIcons.fileContract,
+                  size: 30, color: Colors.white)),
+          Container(
+              padding: EdgeInsets.all(10),
+              child: Icon(FontAwesomeIcons.utensils,
+                  size: 30, color: Colors.white)),
+          Container(
+              padding: EdgeInsets.all(10),
+              child: Icon(FontAwesomeIcons.dumbbell,
+                  size: 30, color: Colors.white)),
+          Container(
+              padding: EdgeInsets.all(10),
+              child: Icon(FontAwesomeIcons.fileMedicalAlt,
+                  size: 30, color: Colors.white)),
         ],
         color: MyColor.kPrimaryColor,
         buttonBackgroundColor: MyColor.kPrimaryColor,

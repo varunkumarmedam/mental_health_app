@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/my_colors.dart';
 
 class Diet extends StatefulWidget {
   @override
@@ -11,148 +12,301 @@ class _DietState extends State<Diet> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Diet Plan'),
-          backgroundColor: Colors.deepPurple,
-        ),
-        body: Column(
-          children: <Widget>[
+        body: Padding(
+          padding: const EdgeInsets.all(30),
+          child: ListView(children: <Widget>[
             Padding(
               padding: EdgeInsets.only(top: 5),
             ),
             Image(
-              image: AssetImage('assets/diet.jpg'),
+              image: AssetImage('assets/Mental/vegetables.jpg'),
+              height: 250,
             ),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(top: 10),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  child: new Text("Monday"),
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DayOne()),
-                    );
-                  },
-                  height: 100,
-                  minWidth: 100,
-                  color: Colors.deepPurple,
+            Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                // decoration: BoxDecoration(
+                //   borderRadius: BorderRadius.circular(10),
+                //   border: Border.all(
+                //     color: MyColor.kPrimaryColor,
+                //     width: 3,
+                //     style: BorderStyle.none
+                //   )
+                // ),
+                child: Text(
+                  "A good diet plan, gives a good Mental Health",
+                  style: TextStyle(
+                      color: MyColor.kPrimaryColor,
+                      fontWeight: FontWeight.w800),
+                )),
+            MaterialButton(
+                splashColor: MyColor.kPrimaryColorLight,
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Monday"), Icon(Icons.chevron_right)],
                 ),
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  child: new Text("Tuesday"),
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DayTwo()),
-                    );
-                  },
-                  height: 100,
-                  minWidth: 100,
-                  color: Colors.deepPurple,
-                ),
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  child: new Text("Wednsday"),
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DayThree()),
-                    );
-                  },
-                  height: 100,
-                  minWidth: 100,
-                  color: Colors.deepPurple,
-                ),
-              ],
-            ),
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DayOne()),
+                  );
+                },
+                height: 50,
+                minWidth: 100,
+                color: MyColor.kPrimaryColor),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(top: 10),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  child: new Text("Thursday"),
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DayFour()),
-                    );
-                  },
-                  height: 100,
-                  minWidth: 100,
-                  color: Colors.deepPurple,
+            MaterialButton(
+                splashColor: MyColor.kPrimaryColorLight,
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Tuesday"), Icon(Icons.chevron_right)],
                 ),
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  child: new Text("Friday"),
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DayFive()),
-                    );
-                  },
-                  height: 100,
-                  minWidth: 100,
-                  color: Colors.deepPurple,
-                ),
-              ],
-            ),
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DayTwo()),
+                  );
+                },
+                height: 50,
+                minWidth: 100,
+                color: MyColor.kPrimaryColor),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(top: 10),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  child: new Text("Saturday"),
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DaySix()),
-                    );
-                  },
-                  height: 100,
-                  minWidth: 100,
-                  color: Colors.deepPurple,
+            MaterialButton(
+                splashColor: MyColor.kPrimaryColorLight,
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Wednesday"), Icon(Icons.chevron_right)],
                 ),
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22.0)),
-                  child: new Text("Sunday"),
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DaySeven()),
-                    );
-                  },
-                  height: 100,
-                  minWidth: 100,
-                  color: Colors.deepPurple,
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DayThree()),
+                  );
+                },
+                height: 50,
+                minWidth: 100,
+                color: MyColor.kPrimaryColor),
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+            ),
+            MaterialButton(
+                splashColor: MyColor.kPrimaryColorLight,
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Thursday"), Icon(Icons.chevron_right)],
                 ),
-              ],
-            )
-          ],
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DayFour()),
+                  );
+                },
+                height: 50,
+                minWidth: 100,
+                color: MyColor.kPrimaryColor),
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+            ),
+            MaterialButton(
+                splashColor: MyColor.kPrimaryColorLight,
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Friday"), Icon(Icons.chevron_right)],
+                ),
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DayFive()),
+                  );
+                },
+                height: 50,
+                minWidth: 100,
+                color: MyColor.kPrimaryColor),
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+            ),
+
+            MaterialButton(
+                splashColor: MyColor.kPrimaryColorLight,
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Saturday"), Icon(Icons.chevron_right)],
+                ),
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DaySix()),
+                  );
+                },
+                height: 50,
+                minWidth: 100,
+                color: MyColor.kPrimaryColor),
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+            ),
+            MaterialButton(
+                splashColor: MyColor.kPrimaryColorLight,
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Sunday"), Icon(Icons.chevron_right)],
+                ),
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DaySeven()),
+                  );
+                },
+                height: 50,
+                minWidth: 100,
+                color: MyColor.kPrimaryColor),
+            //   Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //     children: <Widget>[
+            //       MaterialButton(
+            //         shape: RoundedRectangleBorder(
+            //             borderRadius: BorderRadius.circular(22.0)),
+            //         child: new Text("Tuesday"),
+            //         textColor: Colors.white,
+            //         onPressed: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => DayTwo()),
+            //           );
+            //         },
+            //         height: 100,
+            //         minWidth: 100,
+            //         color: MyColor.kPrimaryColor,
+            //       ),
+            //       MaterialButton(
+            //         shape: RoundedRectangleBorder(
+            //             borderRadius: BorderRadius.circular(22.0)),
+            //         child: new Text("Wednsday"),
+            //         textColor: Colors.white,
+            //         onPressed: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => DayThree()),
+            //           );
+            //         },
+            //         height: 100,
+            //         minWidth: 100,
+            //         color: MyColor.kPrimaryColor,
+            //       ),
+            //     ],
+            //   ),
+            //   Padding(
+            //     padding: EdgeInsets.only(top: 10),
+            //   ),
+            //   Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //     children: <Widget>[
+            //       MaterialButton(
+            //         shape: RoundedRectangleBorder(
+            //             borderRadius: BorderRadius.circular(22.0)),
+            //         child: new Text("Thursday"),
+            //         textColor: Colors.white,
+            //         onPressed: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => DayFour()),
+            //           );
+            //         },
+            //         height: 100,
+            //         minWidth: 100,
+            //         color: MyColor.kPrimaryColor,
+            //       ),
+            //       MaterialButton(
+            //         shape: RoundedRectangleBorder(
+            //             borderRadius: BorderRadius.circular(22.0)),
+            //         child: new Text("Friday"),
+            //         textColor: Colors.white,
+            //         onPressed: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => DayFive()),
+            //           );
+            //         },
+            //         height: 100,
+            //         minWidth: 100,
+            //         color: MyColor.kPrimaryColor,
+            //       ),
+            //     ],
+            //   ),
+            //   Padding(
+            //     padding: EdgeInsets.only(top: 10),
+            //   ),
+            //   Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //     children: <Widget>[
+            //       MaterialButton(
+            //         shape: RoundedRectangleBorder(
+            //             borderRadius: BorderRadius.circular(22.0)),
+            //         child: new Text("Saturday"),
+            //         textColor: Colors.white,
+            //         onPressed: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => DaySix()),
+            //           );
+            //         },
+            //         height: 100,
+            //         minWidth: 100,
+            //         color: MyColor.kPrimaryColor,
+            //       ),
+            //       MaterialButton(
+            //         shape: RoundedRectangleBorder(
+            //             borderRadius: BorderRadius.circular(22.0)),
+            //         child: new Text("Sunday"),
+            //         textColor: Colors.white,
+            //         onPressed: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => DaySeven()),
+            //           );
+            //         },
+            //         height: 100,
+            //         minWidth: 100,
+            //         color: MyColor.kPrimaryColor,
+            //       ),
+            //     ],
+            //   )
+            // ],
+          ]),
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
@@ -166,7 +320,7 @@ class DayOne extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Monday"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: MyColor.kPrimaryColor,
       ),
       body: ListView(
         children: <Widget>[
@@ -188,7 +342,7 @@ class DayOne extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -209,7 +363,7 @@ class DayOne extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -230,7 +384,7 @@ class DayOne extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -250,7 +404,7 @@ class DayOne extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -282,7 +436,7 @@ class DayOne extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -303,7 +457,7 @@ class DayOne extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -323,7 +477,7 @@ class DayOne extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -343,7 +497,7 @@ class DayOne extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -370,7 +524,7 @@ class DayTwo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Tuesday"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: MyColor.kPrimaryColor,
       ),
       body: ListView(
         children: <Widget>[
@@ -393,7 +547,7 @@ class DayTwo extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -418,7 +572,7 @@ class DayTwo extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -438,7 +592,7 @@ class DayTwo extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -458,7 +612,7 @@ class DayTwo extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -494,7 +648,7 @@ class DayTwo extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -515,7 +669,7 @@ class DayTwo extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -535,7 +689,7 @@ class DayTwo extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -555,7 +709,7 @@ class DayTwo extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -582,7 +736,7 @@ class DayThree extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Wednsday"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: MyColor.kPrimaryColor,
       ),
       body: ListView(
         children: <Widget>[
@@ -604,7 +758,7 @@ class DayThree extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -626,7 +780,7 @@ class DayThree extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -646,7 +800,7 @@ class DayThree extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -666,7 +820,7 @@ class DayThree extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -698,7 +852,7 @@ class DayThree extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -719,7 +873,7 @@ class DayThree extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -739,7 +893,7 @@ class DayThree extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -759,7 +913,7 @@ class DayThree extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -786,7 +940,7 @@ class DayFour extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Thursday"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: MyColor.kPrimaryColor,
       ),
       body: ListView(
         children: <Widget>[
@@ -808,7 +962,7 @@ class DayFour extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -829,7 +983,7 @@ class DayFour extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -851,7 +1005,7 @@ class DayFour extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -871,7 +1025,7 @@ class DayFour extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -904,7 +1058,7 @@ class DayFour extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -925,7 +1079,7 @@ class DayFour extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -945,7 +1099,7 @@ class DayFour extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -965,7 +1119,7 @@ class DayFour extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -992,7 +1146,7 @@ class DayFive extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Friday"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: MyColor.kPrimaryColor,
       ),
       body: ListView(
         children: <Widget>[
@@ -1014,7 +1168,7 @@ class DayFive extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1036,7 +1190,7 @@ class DayFive extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1056,7 +1210,7 @@ class DayFive extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1076,7 +1230,7 @@ class DayFive extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1108,7 +1262,7 @@ class DayFive extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1129,7 +1283,7 @@ class DayFive extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1149,7 +1303,7 @@ class DayFive extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1169,7 +1323,7 @@ class DayFive extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1196,7 +1350,7 @@ class DaySix extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Saturday"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: MyColor.kPrimaryColor,
       ),
       body: ListView(
         children: <Widget>[
@@ -1218,7 +1372,7 @@ class DaySix extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1239,7 +1393,7 @@ class DaySix extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1261,7 +1415,7 @@ class DaySix extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1281,7 +1435,7 @@ class DaySix extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1314,7 +1468,7 @@ class DaySix extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1335,7 +1489,7 @@ class DaySix extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1355,7 +1509,7 @@ class DaySix extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1375,7 +1529,7 @@ class DaySix extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1402,7 +1556,7 @@ class DaySeven extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Sunday"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: MyColor.kPrimaryColor,
       ),
       body: ListView(
         children: <Widget>[
@@ -1424,7 +1578,7 @@ class DaySeven extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1445,7 +1599,7 @@ class DaySeven extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1465,7 +1619,7 @@ class DaySeven extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1485,7 +1639,7 @@ class DaySeven extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1517,7 +1671,7 @@ class DaySeven extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1538,7 +1692,7 @@ class DaySeven extends StatelessWidget {
                     'Lunch',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1558,7 +1712,7 @@ class DaySeven extends StatelessWidget {
                     'Snacks',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1578,7 +1732,7 @@ class DaySeven extends StatelessWidget {
                     'Dinner',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: MyColor.kPrimaryColor,
                         fontSize: 30),
                   ),
                 ),
@@ -1607,7 +1761,7 @@ class MyBullet extends StatelessWidget {
       height: 15.0,
       width: 15.0,
       decoration: new BoxDecoration(
-        color: Colors.deepPurple,
+        color: MyColor.kPrimaryColor,
         shape: BoxShape.circle,
       ),
     );
